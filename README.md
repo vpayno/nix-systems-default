@@ -103,3 +103,16 @@ bin/   share/
 $ ./result/bin/hello
 Hello, world!
 ```
+
+## Formatting
+
+Looking to keep `flake.nix` simple, so not defining the `formatter` output, or
+an `fmt` `apps` output. Instead just using the `fmt` app from another flake.
+
+```text
+$ nix run  github:vpayno/nix-treefmt-conf#fmt
+2025/03/23 08:28:52 INFO using config file: /nix/store/d399ya7sivz9pg488zy0p6l8x7q83bnp-treefmt.toml
+traversed 7 files
+emitted 5 files for processing
+formatted 1 files (0 changed) in 39ms
+```
